@@ -22,36 +22,14 @@ body {
   font-size: 1.4rem;
   font-family: "Noto Sans Mono", monospace;
   overflow-x: hidden;
-}
-
-nav {
-  width: 100%;
-  min-height: 3rem;
-  background-color: cornflowerblue;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: small;
-  font-weight: 500;
-  padding: 0.2rem;
-}
-
-nav a {
-  display: block;
-  padding: 0.6rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  background-color: darkblue;
-  border-radius: 2px;
-  transition: 0.3s ease-out;
-  filter: drop-shadow(0px 0px 2px grey);
+  color: white;
+  background-color: #2a2e33;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 h1 {
@@ -70,21 +48,50 @@ p {
   margin: 0.7rem 0;
 }
 
+main {
+  margin-top: 3.3rem;
+}
+
+nav {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: small;
+  padding: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e1f27;
+}
+
+nav a {
+  display: block;
+  padding: 0.6rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  transition: 0.2s ease-in;
+  color: #7678ED;
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 8%, rgba(42, 46, 51, 1) 70%);
 }
 
 .welcome-head {
-  background-color: grey;
-  padding: 2.5rem;
+  padding-left: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 1.5;
-  width: 100%;
-  min-height: 25rem;
-  }
+  width: 100vw;
+  height: 100vh;
+}
 
 .welcome-descript {
   padding: 1rem;
@@ -94,7 +101,7 @@ p {
 .woah {
   margin-top: 1rem;
   font-size: 3rem;
-  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red,violet);
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red, violet);
   background-clip: text;
   color: transparent;
   animation: rainbow_animation 10s ease-in-out infinite;
@@ -145,16 +152,11 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome {
-    flex-direction: row;
-    min-height: 35vh;
-  }
-
   .welcome-head {
     min-width: 60vw;
   }
 
-  .welcome-descript{
+  .welcome-descript {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,11 +165,13 @@ p {
 }
 
 @keyframes rainbow_animation {
-  0%,100% {
-      background-position: 0 0;
+
+  0%,
+  100% {
+    background-position: 0 0;
   }
 
   50% {
-      background-position: 100% 0;
+    background-position: 100% 0;
   }
 }
